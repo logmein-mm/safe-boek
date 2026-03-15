@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achter de Schermen van SAFe® Transformaties - Artikelen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333333;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #3D4A1A 0%, #BFCF3A 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #BFCF3A;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-category {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-category a {
+            display: inline-block;
+            padding: 0.4rem 0.9rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-category a:hover {
+            background-color: #BFCF3A;
+            color: #3D4A1A;
+            border-color: #BFCF3A;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2A3312 0%, #3D4A1A 100%);
+            color: #ffffff;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .major-milestones-brand {
+            display: inline-block;
+            color: #BFCF3A;
+            font-size: 0.95rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #BFCF3A;
+            border-radius: 4px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #D4E05A;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: rgba(191, 207, 58, 0.15);
+            border-radius: 8px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            color: #BFCF3A;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #D4E05A;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background-color: #BFCF3A;
+            color: #3D4A1A;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #BFCF3A;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: #BFCF3A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(191, 207, 58, 0.3);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Category Sections */
+        .category-section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 100px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #BFCF3A;
+        }
+
+        .category-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #3D4A1A;
+            color: #BFCF3A;
+            border-radius: 4px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .category-title {
+            color: #3D4A1A;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .article-card {
+            background-color: #F5F3E8;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            border-left: 4px solid #BFCF3A;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-left-color: #7A8C3A;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-title {
+            color: #3D4A1A;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid #D4E05A;
+        }
+
+        .page-badge {
+            display: inline-block;
+            background-color: #5A6B2A;
+            color: #F5F3E8;
+            padding: 0.35rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background-color: #BFCF3A;
+            color: #3D4A1A;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid #BFCF3A;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: #3D4A1A;
+            color: #BFCF3A;
+            box-shadow: 0 2px 6px rgba(61, 74, 26, 0.2);
+        }
+
+        .download-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2A3312;
+            color: #F5F3E8;
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #BFCF3A;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .footer-link {
+            color: #BFCF3A;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #D4E05A;
+            text-decoration: underline;
+        }
+
+        .footer-divider {
+            margin: 1rem 0;
+            border: none;
+            border-top: 1px solid #5A6B2A;
+        }
+
+        .footer-copyright {
+            font-size: 0.8rem;
+            color: #666666;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .nav-category {
+                width: 100%;
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-header {
+                flex-wrap: wrap;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 0.8rem 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .major-milestones-brand {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="header-content">
+            <div class="logo">MAJOR MILESTONES</div>
+            <nav class="nav-category">
+                <a href="#deel-01">Intro</a>
+                <a href="#deel-02">Fundamenten</a>
+                <a href="#deel-03">Transformatie</a>
+                <a href="#deel-04">Leiderschap</a>
+                <a href="#deel-05">Teams</a>
+                <a href="#deel-06">Work Items</a>
+                <a href="#deel-07">LACE</a>
+                <a href="#deel-08">Metrics</a>
+                <a href="#deel-09">Productiviteit</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="major-milestones-brand">MAJOR MILESTONES</div>
+            <h1>Achter de Schermen van SAFe® Transformaties</h1>
+            <p class="hero-subtitle">De complete artikelreeks van Roel Peels</p>
+
+            <div class="stats-bar">
+                <div class="stat">
+                    <div class="stat-number">43</div>
+                    <div class="stat-label">Artikelen</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Thema's</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">222+</div>
+                    <div class="stat-label">Pagina's</div>
+                </div>
+            </div>
+
+            <a href="boek-alert.html" class="cta-button">Ontvang een melding bij publicatie</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Deel 01: Introductie -->
+        <section class="category-section" id="deel-01">
+            <div class="category-header">
+                <div class="category-number">01</div>
+                <h2 class="category-title">Introductie: Wat is SAFe®</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe Jargon: 30 termen ontcijferd</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/005%20250820%20SAFe%20Jargon%2030%20termen%20ontcijferd%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Het DNA van SAFe: Oorsprong, opbouw en kracht</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">8 pagina's</span>
+                        <a href="artikelen/010%20260301%20Het%20DNA%20van%20SAFe%20Oorsprong%20opbouw%20en%20kracht%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe Ontleed: Oorsprong en het Ecosysteem</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/020%20%20260304%20SAFe%20Ontleed%20Oorsprong%20en%20het%20Ecosysteem%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Waarom SAFe: 18 structurele knelpunten</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/030%200101%20260301%20Waarom%20SAFe%2018%20structurele%20knelpunten%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe voor Dummies: wendbaar werken in Jip en Janneke taal</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/050%200102%20250523%20SAFe%20voor%20Dummies%20wendbaar%20werken%20in%20Jip%20en%20Janneke%20taal%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 02: Theoretische Fundamenten -->
+        <section class="category-section" id="deel-02">
+            <div class="category-header">
+                <div class="category-number">02</div>
+                <h2 class="category-title">Theoretische Fundamenten</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Frameworks, Methodologieën en Empirisme: SAFe, Scrum, PRINCE2</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">3 pagina's</span>
+                        <a href="artikelen/010%200202%20240801%20Frameworks%20Methodologieen%20en%20Empirisme%20SAFe%20Scrum%20PRINCE2%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Agile Manifesto en SAFe principes: 4 kernwaarden, 12 principes</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/020%200201%20250121%20Agile%20Manifesto%20en%20SAFe%20principes%204%20kernwaarden%2012%20principes%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Professionals denken en doen MECE</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">5 pagina's</span>
+                        <a href="artikelen/030%200204%20240101%20Professionals%20denken%20en%20doen%20MECE%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Pragmatisme zonder solide theoretische basis is gokken</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">5 pagina's</span>
+                        <a href="artikelen/070%200203%20241209%20Pragmatisme%20zonder%20solide%20theoretische%20basis%20is%20gokken%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 03: Transformatie en Verandering -->
+        <section class="category-section" id="deel-03">
+            <div class="category-header">
+                <div class="category-number">03</div>
+                <h2 class="category-title">Transformatie en Verandering</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Agile Transformatie: waar organisaties mee stoppen en beginnen</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">5 pagina's</span>
+                        <a href="artikelen/010%20050%20260310_SAFe_AgileTransformatie_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Van Pitch naar Praktijk</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">8 pagina's</span>
+                        <a href="artikelen/015%20260313_SAFe_VanPitchNaarPraktijk_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe: wat schaalt er eigenlijk? 10 dimensies</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/020%200304%20241005%20SAFe%20wat%20schaalt%20er%20eigenlijk%2010%20dimensies%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Impact van het aanpassen van SAFe terminologie</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/030%200305%20241001%20Impact%20van%20het%20aanpassen%20van%20SAFe%20terminologie%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 04: Leiderschap, Cultuur en Mindset -->
+        <section class="category-section" id="deel-04">
+            <div class="category-header">
+                <div class="category-number">04</div>
+                <h2 class="category-title">Leiderschap, Cultuur en Mindset</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">De essentiële kenmerken van een ware Agilist</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/010%200402%20241126%20De%20essentiele%20kenmerken%20van%20een%20ware%20Agilist%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Het Drieculturenvraaagstuk in SAFe</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/020%2004050%20260308_SAFe_DrieculturenVraagstuk_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Hoe maak je SAFe cultuur meetbaar: deep dive</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/030%200403%20241130%20Hoe%20maak%20je%20SAFe%20cultuur%20meetbaar%20deep%20dive%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Komst van SAFe voor lijnmanager en medewerker</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/062%200303%20241112%20Komst%20van%20SAFe%20voor%20lijnmanager%20en%20medewerker%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Transformeren naar SAFe: wat dit betekent voor werknemers</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">5 pagina's</span>
+                        <a href="artikelen/063%200302%20240829%20Transformeren%20naar%20SAFe%20wat%20dit%20betekent%20voor%20werknemers%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Leiderschap in twee werelden: hiërarchie en value stream network</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/065%200401%20250220%20Leiderschap%20in%20twee%20werelden%20hierarchie%20en%20value%20stream%20network%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Waarom roulerend voorzitterschap in SAFe</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/070%200404%20240401%20Waarom%20roulerend%20voorzitterschap%20in%20SAFe%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 05: Teams en Teamorganisatie -->
+        <section class="category-section" id="deel-05">
+            <div class="category-header">
+                <div class="category-number">05</div>
+                <h2 class="category-title">Teams en Teamorganisatie</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Wanneer is een Agile Team echt een top Team?</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/010%200502%20260305%20Wanneer%20is%20een%20Agile%20Team%20echt%20een%20top%20Team%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">18 essentiële kenmerken van een SAFe Agile Team</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/030%200501%20241011%2018%20essentiele%20kenmerken%20van%20een%20SAFe%20Agile%20Team%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Geen werkrollen op ART-niveau en SAFe alternatieven</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/050%200503%20250526%20Geen%20werkrollen%20op%20ART%20niveau%20en%20SAFe%20alternatieven%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe Iteration Review: handleiding effectief event</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/060%200504%20260301%20SAFe%20Iteration%20Review%20handleiding%20effectief%20event%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 06: Work Items, Portfolio en Waarde -->
+        <section class="category-section" id="deel-06">
+            <div class="category-header">
+                <div class="category-number">06</div>
+                <h2 class="category-title">Work Items, Portfolio en Waarde</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Waarom het begrip 'waarde' zo lastig is: benefits realisation</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">7 pagina's</span>
+                        <a href="artikelen/010%200607%20251123%20Waarom%20het%20begrip%20waarde%20zo%20lastig%20is%20benefits%20realisation%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Economische prioritering in SAFe: WSJF en Cost of Delay</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">5 pagina's</span>
+                        <a href="artikelen/020%200606%20241001%20Economische%20prioritering%20in%20SAFe%20WSJF%20en%20Cost%20of%20Delay%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Project versus SAFe Epic: overeenkomsten en verschillen</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">2 pagina's</span>
+                        <a href="artikelen/030%200603%20250201%20Project%20versus%20SAFe%20Epic%20overeenkomsten%20en%20verschillen%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Kernelementen van een Feature: theorie vs. praktijk</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">4 pagina's</span>
+                        <a href="artikelen/040%200602%20250101%20Kern%20elementen%20van%20een%20Feature%20theorie%20vs%20praktijk%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Business of Enabler: waarom het verschil essentieel is</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">3 pagina's</span>
+                        <a href="artikelen/060%200604%20250501%20Business%20of%20Enabler%20waarom%20het%20verschil%20essentieel%20is%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">User Story sizing in SAFe: hoe groot mag een story zijn?</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">3 pagina's</span>
+                        <a href="artikelen/070%200605%20241107%20User%20Story%20sizing%20in%20SAFe%20hoe%20groot%20mag%20een%20story%20zijn%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 07: LACE, Governance en Inrichting -->
+        <section class="category-section" id="deel-07">
+            <div class="category-header">
+                <div class="category-number">07</div>
+                <h2 class="category-title">LACE, Governance en Inrichting</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Enterprise Cadence: ontwerpcriteria voor SAFe ritme</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">8 pagina's</span>
+                        <a href="artikelen/010%20260310_SAFe_EnterpriseCadence_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe Work Items: het governance model voor tooling</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">7 pagina's</span>
+                        <a href="artikelen/015%200601%20260301%20SAFe%20Work%20Items%20het%20governance%20model%20voor%20tooling%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe LACE Hub and Spoke model: E-LACE en O-LACE</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/020%200702%20250220%20SAFe%20LACE%20Hub%20and%20Spoke%20model%20E-LACE%20en%20O-LACE%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Het LACE in SAFe: van bottom-up naar enterprise governance</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">5 pagina's</span>
+                        <a href="artikelen/040%200701%20250101%20Het%20LACE%20in%20SAFe%20van%20bottom%20up%20naar%20enterprise%20governance%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Ontwerp van het LACE Kanban Board</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">7 pagina's</span>
+                        <a href="artikelen/050%200703%20241103%20Ontwerp%20van%20het%20LACE%20Kanban%20Board%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">SAFe Governance structuur in wendbare organisatie</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">3 pagina's</span>
+                        <a href="artikelen/060%200704%20241201%20SAFe%20Governance%20structuur%20in%20wendbare%20organisatie%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Verschil tussen risico's en belemmeringen in SAFe</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">3 pagina's</span>
+                        <a href="artikelen/070%200608%20240816%20Verschil%20tussen%20risicos%20en%20belemmeringen%20in%20SAFe%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 08: Metrics en Kosten -->
+        <section class="category-section" id="deel-08">
+            <div class="category-header">
+                <div class="category-number">08</div>
+                <h2 class="category-title">Metrics en Kosten</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Data Driven Improvements: sturen op juiste metrics</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">11 pagina's</span>
+                        <a href="artikelen/010%20260307_SAFe_DataDrivenImprovements_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Wat kost een Agile Team, ART en LPM: rekenmodel</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/020%20260301%20Wat%20kost%20een%20Agile%20Team%20ART%20en%20LPM%20rekenmodel%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deel 09: Productiviteit en Persoonlijk -->
+        <section class="category-section" id="deel-09">
+            <div class="category-header">
+                <div class="category-number">09</div>
+                <h2 class="category-title">Productiviteit en Persoonlijk</h2>
+            </div>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Inbox Zero: waarom mijn zakelijke inbox elke dag leeg is</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">6 pagina's</span>
+                        <a href="artikelen/020%20260115%20Inbox%20Zero%20waarom%20mijn%20zakelijke%20inbox%20elke%20dag%20leeg%20is%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Nooit meer een document kwijt met een GMS (Deel 1)</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">16 pagina's</span>
+                        <a href="artikelen/040%20260315_SAFe_GMS_Deel1_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">Bestandsnaamconventie: BNC (Deel 2)</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">5 pagina's</span>
+                        <a href="artikelen/050%20260315_SAFe_BNC_Deel2_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3 class="article-title">E-mail Onderwerpegel Conventie: ECC</h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="page-badge">3 pagina's</span>
+                        <a href="artikelen/060%20260310_ECC_EmailOnderwerpRegelConventie_MajorMilestones.pdf" class="download-btn" target="_blank">
+                            <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <footer-content>
+            <div class="footer-logo">MAJOR MILESTONES</div>
+            <p class="footer-text">Achter de Schermen van SAFe® Transformaties</p>
+            <p class="footer-text">Uitgever: Major Milestones B.V. | Auteur: Roel Peels</p>
+            <hr class="footer-divider">
+            <p class="footer-text">
+                <a href="https://majormilestones.nl" class="footer-link">Bezoek onze website</a>
+            </p>
+            <p class="footer-copyright">
+                &copy; 2024-2025 Major Milestones B.V. Alle rechten voorbehouden.
+            </p>
+        </footer-content>
+    </footer>
+</body>
+</html>
