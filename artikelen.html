@@ -80,12 +80,29 @@
             background: linear-gradient(135deg, #2A3312 0%, #3D4A1A 100%);
             color: #ffffff;
             padding: 4rem 1.5rem;
-            text-align: center;
         }
 
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .hero-cover {
+            flex: 0 0 280px;
+        }
+
+        .hero-cover img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(191, 207, 58, 0.2);
+        }
+
+        .hero-text {
+            flex: 1;
         }
 
         .major-milestones-brand {
@@ -116,7 +133,7 @@
 
         .stats-bar {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin: 2rem 0;
             padding: 1.5rem;
@@ -161,6 +178,20 @@
             color: #BFCF3A;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(191, 207, 58, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-cover {
+                flex: 0 0 auto;
+                max-width: 220px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
         }
 
         /* Main Content */
@@ -435,26 +466,31 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="major-milestones-brand">MAJOR MILESTONES</div>
-            <h1>Achter de Schermen van SAFe® Transformaties</h1>
-            <p class="hero-subtitle">De complete artikelreeks van Roel Peels</p>
-
-            <div class="stats-bar">
-                <div class="stat">
-                    <div class="stat-number">43</div>
-                    <div class="stat-label">Artikelen</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">9</div>
-                    <div class="stat-label">Thema's</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">222+</div>
-                    <div class="stat-label">Pagina's</div>
-                </div>
+            <div class="hero-cover">
+                <img src="cover.png" alt="Boek cover: Achter de Schermen van SAFe Transformaties">
             </div>
+            <div class="hero-text">
+                <div class="major-milestones-brand">MAJOR MILESTONES</div>
+                <h1>Achter de Schermen van SAFe® Transformaties</h1>
+                <p class="hero-subtitle">De complete artikelreeks van Roel Peels</p>
 
-            <a href="boek-alert.html" class="cta-button">Ontvang een melding bij publicatie</a>
+                <div class="stats-bar">
+                    <div class="stat">
+                        <div class="stat-number">43</div>
+                        <div class="stat-label">Artikelen</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">9</div>
+                        <div class="stat-label">Thema's</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">222+</div>
+                        <div class="stat-label">Pagina's</div>
+                    </div>
+                </div>
+
+                <a href="boek-alert.html" class="cta-button">Ontvang een melding bij publicatie</a>
+            </div>
         </div>
     </section>
 
