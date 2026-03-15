@@ -83,22 +83,29 @@
         }
 
         .hero-content {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 3rem;
+            text-align: center;
+            gap: 2rem;
         }
 
         .hero-cover {
-            flex: 0 0 280px;
+            max-width: 300px;
         }
 
         .hero-cover img {
             width: 100%;
             height: auto;
             border-radius: 6px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(191, 207, 58, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(191, 207, 58, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-cover img:hover {
+            transform: scale(1.03);
         }
 
         .hero-text {
@@ -181,12 +188,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
             .hero-cover {
-                flex: 0 0 auto;
                 max-width: 220px;
             }
             .hero h1 {
@@ -505,7 +507,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">2 pagina's</span>
-                        <a href="artikelen/0002%20260301%20Voorwoord%20Boek%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/0002%20260301%20Voorwoord%20Boek%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -521,7 +523,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">1 pagina</span>
-                        <a href="artikelen/0003%20260301%20Flaptekst%20Over%20de%20Auteur%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/0003%20260301%20Flaptekst%20Over%20de%20Auteur%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -546,7 +548,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/005%20250820%20SAFe%20Jargon%2030%20termen%20ontcijferd%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/005%20250820%20SAFe%20Jargon%2030%20termen%20ontcijferd%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -562,7 +564,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">8 pagina's</span>
-                        <a href="artikelen/010%20260301%20Het%20DNA%20van%20SAFe%20Oorsprong%20opbouw%20en%20kracht%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%20260301%20Het%20DNA%20van%20SAFe%20Oorsprong%20opbouw%20en%20kracht%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -578,7 +580,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/020%20%20260304%20SAFe%20Ontleed%20Oorsprong%20en%20het%20Ecosysteem%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%20%20260304%20SAFe%20Ontleed%20Oorsprong%20en%20het%20Ecosysteem%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -594,7 +596,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/030%200101%20260301%20Waarom%20SAFe%2018%20structurele%20knelpunten%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/030%200101%20260301%20Waarom%20SAFe%2018%20structurele%20knelpunten%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -610,7 +612,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/050%200102%20250523%20SAFe%20voor%20Dummies%20wendbaar%20werken%20in%20Jip%20en%20Janneke%20taal%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/050%200102%20250523%20SAFe%20voor%20Dummies%20wendbaar%20werken%20in%20Jip%20en%20Janneke%20taal%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -635,7 +637,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">3 pagina's</span>
-                        <a href="artikelen/010%200202%20240801%20Frameworks%20Methodologieen%20en%20Empirisme%20SAFe%20Scrum%20PRINCE2%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%200202%20240801%20Frameworks%20Methodologieen%20en%20Empirisme%20SAFe%20Scrum%20PRINCE2%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -651,7 +653,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/020%200201%20250121%20Agile%20Manifesto%20en%20SAFe%20principes%204%20kernwaarden%2012%20principes%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%200201%20250121%20Agile%20Manifesto%20en%20SAFe%20principes%204%20kernwaarden%2012%20principes%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -667,7 +669,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">5 pagina's</span>
-                        <a href="artikelen/030%200204%20240101%20Professionals%20denken%20en%20doen%20MECE%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/030%200204%20240101%20Professionals%20denken%20en%20doen%20MECE%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -683,7 +685,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">5 pagina's</span>
-                        <a href="artikelen/070%200203%20241209%20Pragmatisme%20zonder%20solide%20theoretische%20basis%20is%20gokken%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/070%200203%20241209%20Pragmatisme%20zonder%20solide%20theoretische%20basis%20is%20gokken%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -708,7 +710,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">5 pagina's</span>
-                        <a href="artikelen/010%20050%20260310_SAFe_AgileTransformatie_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%20050%20260310_SAFe_AgileTransformatie_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -724,7 +726,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">8 pagina's</span>
-                        <a href="artikelen/015%20260313_SAFe_VanPitchNaarPraktijk_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/015%20260313_SAFe_VanPitchNaarPraktijk_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -740,7 +742,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/020%200304%20241005%20SAFe%20wat%20schaalt%20er%20eigenlijk%2010%20dimensies%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%200304%20241005%20SAFe%20wat%20schaalt%20er%20eigenlijk%2010%20dimensies%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -756,7 +758,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/030%200305%20241001%20Impact%20van%20het%20aanpassen%20van%20SAFe%20terminologie%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/030%200305%20241001%20Impact%20van%20het%20aanpassen%20van%20SAFe%20terminologie%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -781,7 +783,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/010%200402%20241126%20De%20essentiele%20kenmerken%20van%20een%20ware%20Agilist%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%200402%20241126%20De%20essentiele%20kenmerken%20van%20een%20ware%20Agilist%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -797,7 +799,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/020%2004050%20260308_SAFe_DrieculturenVraagstuk_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%2004050%20260308_SAFe_DrieculturenVraagstuk_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -813,7 +815,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/030%200403%20241130%20Hoe%20maak%20je%20SAFe%20cultuur%20meetbaar%20deep%20dive%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/030%200403%20241130%20Hoe%20maak%20je%20SAFe%20cultuur%20meetbaar%20deep%20dive%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -829,7 +831,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/062%200303%20241112%20Komst%20van%20SAFe%20voor%20lijnmanager%20en%20medewerker%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/062%200303%20241112%20Komst%20van%20SAFe%20voor%20lijnmanager%20en%20medewerker%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -845,7 +847,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">5 pagina's</span>
-                        <a href="artikelen/063%200302%20240829%20Transformeren%20naar%20SAFe%20wat%20dit%20betekent%20voor%20werknemers%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/063%200302%20240829%20Transformeren%20naar%20SAFe%20wat%20dit%20betekent%20voor%20werknemers%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -861,7 +863,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/065%200401%20250220%20Leiderschap%20in%20twee%20werelden%20hierarchie%20en%20value%20stream%20network%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/065%200401%20250220%20Leiderschap%20in%20twee%20werelden%20hierarchie%20en%20value%20stream%20network%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -877,7 +879,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/070%200404%20240401%20Waarom%20roulerend%20voorzitterschap%20in%20SAFe%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/070%200404%20240401%20Waarom%20roulerend%20voorzitterschap%20in%20SAFe%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -902,7 +904,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/010%200502%20260305%20Wanneer%20is%20een%20Agile%20Team%20echt%20een%20top%20Team%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%200502%20260305%20Wanneer%20is%20een%20Agile%20Team%20echt%20een%20top%20Team%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -918,7 +920,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/030%200501%20241011%2018%20essentiele%20kenmerken%20van%20een%20SAFe%20Agile%20Team%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/030%200501%20241011%2018%20essentiele%20kenmerken%20van%20een%20SAFe%20Agile%20Team%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -934,7 +936,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/050%200503%20250526%20Geen%20werkrollen%20op%20ART%20niveau%20en%20SAFe%20alternatieven%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/050%200503%20250526%20Geen%20werkrollen%20op%20ART%20niveau%20en%20SAFe%20alternatieven%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -950,7 +952,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/060%200504%20260301%20SAFe%20Iteration%20Review%20handleiding%20effectief%20event%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/060%200504%20260301%20SAFe%20Iteration%20Review%20handleiding%20effectief%20event%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -975,7 +977,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">7 pagina's</span>
-                        <a href="artikelen/010%200607%20251123%20Waarom%20het%20begrip%20waarde%20zo%20lastig%20is%20benefits%20realisation%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%200607%20251123%20Waarom%20het%20begrip%20waarde%20zo%20lastig%20is%20benefits%20realisation%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -991,7 +993,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">5 pagina's</span>
-                        <a href="artikelen/020%200606%20241001%20Economische%20prioritering%20in%20SAFe%20WSJF%20en%20Cost%20of%20Delay%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%200606%20241001%20Economische%20prioritering%20in%20SAFe%20WSJF%20en%20Cost%20of%20Delay%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1007,7 +1009,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">2 pagina's</span>
-                        <a href="artikelen/030%200603%20250201%20Project%20versus%20SAFe%20Epic%20overeenkomsten%20en%20verschillen%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/030%200603%20250201%20Project%20versus%20SAFe%20Epic%20overeenkomsten%20en%20verschillen%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1023,7 +1025,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">4 pagina's</span>
-                        <a href="artikelen/040%200602%20250101%20Kern%20elementen%20van%20een%20Feature%20theorie%20vs%20praktijk%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/040%200602%20250101%20Kern%20elementen%20van%20een%20Feature%20theorie%20vs%20praktijk%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1039,7 +1041,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">3 pagina's</span>
-                        <a href="artikelen/060%200604%20250501%20Business%20of%20Enabler%20waarom%20het%20verschil%20essentieel%20is%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/060%200604%20250501%20Business%20of%20Enabler%20waarom%20het%20verschil%20essentieel%20is%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1055,7 +1057,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">3 pagina's</span>
-                        <a href="artikelen/070%200605%20241107%20User%20Story%20sizing%20in%20SAFe%20hoe%20groot%20mag%20een%20story%20zijn%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/070%200605%20241107%20User%20Story%20sizing%20in%20SAFe%20hoe%20groot%20mag%20een%20story%20zijn%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1080,7 +1082,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">8 pagina's</span>
-                        <a href="artikelen/010%20260310_SAFe_EnterpriseCadence_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%20260310_SAFe_EnterpriseCadence_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1096,7 +1098,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">7 pagina's</span>
-                        <a href="artikelen/015%200601%20260301%20SAFe%20Work%20Items%20het%20governance%20model%20voor%20tooling%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/015%200601%20260301%20SAFe%20Work%20Items%20het%20governance%20model%20voor%20tooling%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1112,7 +1114,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/020%200702%20250220%20SAFe%20LACE%20Hub%20and%20Spoke%20model%20E-LACE%20en%20O-LACE%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%200702%20250220%20SAFe%20LACE%20Hub%20and%20Spoke%20model%20E-LACE%20en%20O-LACE%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1128,7 +1130,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">5 pagina's</span>
-                        <a href="artikelen/040%200701%20250101%20Het%20LACE%20in%20SAFe%20van%20bottom%20up%20naar%20enterprise%20governance%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/040%200701%20250101%20Het%20LACE%20in%20SAFe%20van%20bottom%20up%20naar%20enterprise%20governance%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1144,7 +1146,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">7 pagina's</span>
-                        <a href="artikelen/050%200703%20241103%20Ontwerp%20van%20het%20LACE%20Kanban%20Board%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/050%200703%20241103%20Ontwerp%20van%20het%20LACE%20Kanban%20Board%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1160,7 +1162,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">3 pagina's</span>
-                        <a href="artikelen/060%200704%20241201%20SAFe%20Governance%20structuur%20in%20wendbare%20organisatie%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/060%200704%20241201%20SAFe%20Governance%20structuur%20in%20wendbare%20organisatie%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1176,7 +1178,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">3 pagina's</span>
-                        <a href="artikelen/070%200608%20240816%20Verschil%20tussen%20risicos%20en%20belemmeringen%20in%20SAFe%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/070%200608%20240816%20Verschil%20tussen%20risicos%20en%20belemmeringen%20in%20SAFe%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1201,7 +1203,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">11 pagina's</span>
-                        <a href="artikelen/010%20260307_SAFe_DataDrivenImprovements_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/010%20260307_SAFe_DataDrivenImprovements_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1217,7 +1219,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/020%20260301%20Wat%20kost%20een%20Agile%20Team%20ART%20en%20LPM%20rekenmodel%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%20260301%20Wat%20kost%20een%20Agile%20Team%20ART%20en%20LPM%20rekenmodel%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1242,7 +1244,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">6 pagina's</span>
-                        <a href="artikelen/020%20260115%20Inbox%20Zero%20waarom%20mijn%20zakelijke%20inbox%20elke%20dag%20leeg%20is%20-MAJMILES.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/020%20260115%20Inbox%20Zero%20waarom%20mijn%20zakelijke%20inbox%20elke%20dag%20leeg%20is%20-MAJMILES.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1258,7 +1260,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">16 pagina's</span>
-                        <a href="artikelen/040%20260315_SAFe_GMS_Deel1_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/040%20260315_SAFe_GMS_Deel1_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1274,7 +1276,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">5 pagina's</span>
-                        <a href="artikelen/050%20260315_SAFe_BNC_Deel2_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/050%20260315_SAFe_BNC_Deel2_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1290,7 +1292,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="page-badge">3 pagina's</span>
-                        <a href="artikelen/060%20260310_ECC_EmailOnderwerpRegelConventie_MajorMilestones.pdf" class="download-btn" target="_blank">
+                        <a href="#" onclick="openPdfViewer('artikelen/060%20260310_ECC_EmailOnderwerpRegelConventie_MajorMilestones.pdf'); return false;" class="download-btn">
                             <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                 <circle cx="12" cy="12" r="3"></circle>
@@ -1302,6 +1304,35 @@
             </div>
         </section>
     </main>
+
+    <!-- PDF Viewer Overlay -->
+    <div id="pdf-viewer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; background:rgba(0,0,0,0.85);">
+        <div style="position:absolute; top:10px; right:20px; display:flex; gap:12px; z-index:10000;">
+            <a id="pdf-newtab" href="#" target="_blank" style="color:#BFCF3A; font-size:0.9rem; text-decoration:none; padding:8px 16px; border:1px solid #BFCF3A; border-radius:4px;">Open in nieuw tabblad</a>
+            <button onclick="closePdfViewer()" style="background:none; border:2px solid #fff; color:#fff; font-size:1.5rem; width:44px; height:44px; border-radius:50%; cursor:pointer; line-height:1;">&times;</button>
+        </div>
+        <iframe id="pdf-iframe" src="" style="width:90%; height:90%; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); border:none; border-radius:6px; background:#fff;"></iframe>
+    </div>
+
+    <script>
+    function openPdfViewer(url) {
+        document.getElementById('pdf-iframe').src = url;
+        document.getElementById('pdf-newtab').href = url;
+        document.getElementById('pdf-viewer').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    function closePdfViewer() {
+        document.getElementById('pdf-viewer').style.display = 'none';
+        document.getElementById('pdf-iframe').src = '';
+        document.body.style.overflow = '';
+    }
+    document.getElementById('pdf-viewer').addEventListener('click', function(e) {
+        if (e.target === this) closePdfViewer();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closePdfViewer();
+    });
+    </script>
 
     <!-- Footer -->
     <footer>
